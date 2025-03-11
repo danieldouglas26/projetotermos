@@ -8,6 +8,7 @@ Este projeto tem como objetivo criar uma aplicação para a automatização da c
 2. Instale as dependências necessárias.
 3. Execute o comando no terminal "npm update" e depois "npm run dev".
 4. Acesse a aplicação no navegador, porta padrão setada na 3333.
+5. Node version (v22.14.0)
 
 ## Licença
 
