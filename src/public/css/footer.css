@@ -1,0 +1,24 @@
+footer {
+    /* Seus estilos de footer existentes */
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
+
+footer a {
+    /* Estilos para links no rodapé */
+    color: white;
+    /* Cor do link */
+    text-decoration: none;
+    /* Remove a decoração do link */
+    transition: color 0.3s ease;
+    /* Adiciona uma transição suave na cor do link */
+}
+
+footer a:hover {
+    color: #ddd;
+    /* Cor do link no hover */
+}

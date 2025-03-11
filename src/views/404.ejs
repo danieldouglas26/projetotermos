@@ -1,0 +1,31 @@
+<!--(Pagina do erro 404, quando a rota não for encontrada)-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/404.css">
+
+    <title>Página não encontrada - Erro 404</title>
+    <%- include('layouts/head') %>
+</head>
+
+<body>
+
+    <%- include('layouts/header') %>
+
+        <main id="conteudopagina">
+            <section class="formulario-container">
+                <h1>Erro 404 - Página não encontrada</h1>
+                <p>A página que você está procurando não existe.</p>
+                <p>Verifique a URL ou volte para a <a href="/">página inicial</a>.</p>
+            </section>
+        </main>
+
+        <%- include('layouts/footer') %>
+
+</body>
+
+</html>

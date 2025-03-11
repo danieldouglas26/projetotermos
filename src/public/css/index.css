@@ -1,0 +1,154 @@
+:root {
+  --cor-principal: #000000;
+  --cor-fundo: #ffffff;
+  --cor-borda: #ccc;
+  --espacamento-padrao: 20px;
+  --raio-borda: 5px;
+  --fonte-padrao: sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+.formulario-container {
+  max-width: 600px;
+  width: 90%;
+  margin: 30px auto;
+
+}
+
+form {
+  width: 100%;
+  /* Ocupa a largura do container */
+  margin: 20px auto auto 0px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: justify;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+#termo {
+  max-width: 600px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.6;
+  word-spacing: 1px;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  display: none;
+
+}
+
+
+#termo.mostrar {
+  display: block;
+  /* Mostra o termo quando necessário */
+}
+
+#conteudopagina {
+
+  font-family: sans-serif;
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+#lista-itens-termo {
+  margin-left: 20px;
+  /* Ajuste o valor conforme necessário */
+}
+
+button {
+  background-color: var(--cor-principal);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 767px) {
+
+  .formulario-container {
+    flex: 1;
+
+  }
+
+  #conteudopagina {
+    margin-top: 50px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  form,
+  #termo {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .formulario-container,
+  #termo {
+    max-width: 600px;
+    /* Mantém a largura máxima em desktops */
+  }
+
+  .formulario-container {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+
+
+}

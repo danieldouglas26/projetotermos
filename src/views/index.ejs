@@ -1,0 +1,70 @@
+<!--(Página principal do projeto, para gerar os termos (Rota inicial redireciona para cá tbm))-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+
+
+  <title>Termo de Responsabilidade</title>
+  <%- include('layouts/head') %>
+</head>
+
+<body>
+
+  <%- include('layouts/header') %>
+
+
+    <main id="conteudopagina">
+      <section class="formulario-container">
+        <h1>Termo de Responsabilidade</h1>
+        <form id="formulario">
+
+          <div class="input-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required placeholder="NOME COMPLETO">
+          </div>
+
+          <div class="input-group">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" maxlength="14" required placeholder="000.000.000-00">
+          </div>
+
+          <!--div class="input-group">
+            <label for="cpf">Observação (Opecional):</label>
+            <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Tamno M">
+          </div-->
+
+          <!--(Os itens são adiconada dinamicamente pelo meu arquivo index.js, lendo o json contendo os mesmo. Para alterar eles, use o config.json na pasta data)-->
+          <div class="input-group">
+            <label for="itens">Itens:</label>
+            <select id="itens" name="itens" multiple required></select>
+          </div>
+
+          <button type="submit">Visualizar Prévia</button>
+        </form>
+      </section>
+
+      <section id="termo" style="display: none;">
+        <h2></h2><br>
+        <p>
+          Eu, <span id="nome-termo"></span>, CPF <span id="cpf-termo"></span>, declaro ter recebido os seguintes itens:
+        </p><br>
+        <ul id="lista-itens-termo"></ul><br>
+        <p>Data: <span id="data-termo"></span></p><br>
+        <button onclick="gerarPDF()">Confirmar e gerar termo (PDF)</button>
+      </section>
+    </main>
+
+    <%- include('layouts/footer') %>
+
+      <!-- Scripts JS -->
+      <script src="js/pages/index.js"></script>
+      <script src="js/lib/pdfmake.min.js"></script>
+      <script src="js/lib/vfs_fonts.js"></script>
+
+</body>
+
+</html>
